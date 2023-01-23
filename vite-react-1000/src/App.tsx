@@ -1017,7 +1017,9 @@ import { Comp999 } from './components/comp999'
 
 export default function App() {
   return <div>
-    root: ${Date.now()}
+    <p>test</p>
+    root: {Date.now()}
+    <Comp0 />
     <Car />
     <Car01 />
     <Car02 />
@@ -1033,7 +1035,6 @@ export default function App() {
     <Car12 />
     <Car13 />
     <Car14 />
-    <Comp0 />
     <Comp1 />
     <Comp2 />
     <Comp3 />

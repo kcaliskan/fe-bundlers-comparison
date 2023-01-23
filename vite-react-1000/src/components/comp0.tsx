@@ -1,3 +1,5 @@
 export function Comp0() {
-    return <div>hello 0</div>
-  }
+  return <div>leaf: {Date.now()}
+  <p>leafz</p>
+  </div>
+}
