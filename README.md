@@ -22,7 +22,7 @@ Vite: `src/App.tsx` (root) and `src/components/comp0.tsx` (leaf)
 The edited components all render `Date.now()` in their output. The final rendered timestamp in the DOM is used to mark the completion of HMR.
 
 ### Numbers
-+ Recorded 5 runs and then average them
++ Recorded 5 runs and then averaged them (cleaned nextjs, vite and npm cache before each run)
 + Time in ms
 + Tested on M1 MacBook Pro (First generation Apple M1, 16 GB RAM, 1 TB SSD)
 
