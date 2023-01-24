@@ -1,56 +1,64 @@
+'use client'
+
 import '@/styles/globals.css';
 import React from 'react';
-import AddressBar from '@/ui/AddressBar';
-import GlobalNav from './GlobalNav';
+
+
+import Car from './Car';
+import Car01 from './Car01';
+import Car02 from './Car02';
+import Car03 from './Car03';
+import Car04 from './Car04';
+import Car05 from './Car05';
+import Car06 from './Car06';
+import Car07 from './Car07';
+import Car08 from './Car08';
+import Car09 from './Car09';
+import Car10 from './Car10';
+import Car11 from './Car11';
+import Car12 from './Car12';
+import Car13 from './Car13';
+import Car14 from './Car14';
+import { Comp0 } from './comp0'
+
+import { useEffect, useState } from 'react'
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
+  const [timestamp, setTimestamp] = useState(0)
+  useEffect(() => {
+    setTimestamp(Date.now())
+  }, [])
+
   return (
     <html>
       <head>
         <title>Next.js Turbopack App Directory Playground</title>
       </head>
-      <body className="overflow-y-scroll bg-zinc-900">
-        <div className="grid grid-cols-[1fr,minmax(auto,240px),min(800px,100%),1fr] gap-x-8 py-8">
-          <div className="col-start-2">
-            <GlobalNav />
-          </div>
-
-          <div className="col-start-3 space-y-6">
-            <AddressBar />
-
-            <div className="rounded-xl border border-zinc-800 bg-black p-8">
-              {children}
-            </div>
-          </div>
-
-          <div className="col-start-3 col-end-4 mt-28 flex items-center justify-center">
-            <div className="text-sm text-zinc-600">
-              Created by the <b>Next.js</b>
-              {' team at '}
-              <a href="https://vercel.com">
-                <b>Vercel</b>
-              </a>
-              {'. '}
-              <a
-                className="underline decoration-dotted underline-offset-4"
-                href="https://github.com/vercel/next.js/examples/with-turbopack"
-              >
-                View the code
-              </a>
-              {' or '}
-              <a
-                className="underline decoration-dotted underline-offset-4"
-                href="https://vercel.com/templates/next.js"
-              >
-                deploy your own
-              </a>
-              {'.'}
-            </div>
-          </div>
+      <body>
+        <div>
+          <p>Root</p>
+          root: {timestamp}
+          <Comp0 />
+          <Car />
+          <Car01 />
+          <Car02 />
+          <Car03 />
+          <Car04 />
+          <Car05 />
+          <Car06 />
+          <Car07 />
+          <Car08 />
+          <Car09 />
+          <Car10 />
+          <Car11 />
+          <Car12 />
+          <Car13 />
+          <Car14 />
         </div>
       </body>
     </html>
