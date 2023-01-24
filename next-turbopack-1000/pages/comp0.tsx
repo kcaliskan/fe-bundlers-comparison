@@ -7,7 +7,7 @@ export function Comp0() {
     setTimestamp(Date.now())
   }, [])
 
-  return <div>hello 213sfasafas22fa2222ff2zfsa
+  return <div>hello23fsaz2fz2423xszf22zv2341qs
     Leaf: {timestamp}
   </div>
 }

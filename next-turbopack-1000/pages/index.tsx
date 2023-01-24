@@ -26,7 +26,7 @@ export default function Home() {
   }, [])
 
   return <div>
-    <p>Rootzasfas1232faa221sf21sdas1</p>
+    <p>Rootz72322fszz923jksa2f909821</p>
     root: {timestamp}
     <Comp0 />
     <Car />
