@@ -1,4 +1,3 @@
-// import { watch } from "node:fs";
 const { watch } = require("node:fs");
 
 watch("pages/index.tsx", (e, filename) => {
