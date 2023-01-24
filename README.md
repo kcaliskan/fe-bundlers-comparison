@@ -28,7 +28,7 @@ The edited components all render `Date.now()` in their output. The final rendere
 
 |      | Vite + React* | Vite + React + 1000 | Vite SWC + React* | Vite SWC + React + 1000 | Nextjs* | Nextjs + 1000 | Nextjs + Turbo | Nextjs + Turbo + 1000 |
 |------|---------------|---------------------|-------------------|-------------------------|---------|---------------|----------------|-----------------------|
-| Root |         0.694 |               1.202 |             0.272 |                   0.978 |   1.444 |         2.226 | 0.416          | 0.75                  |
+| Root |         0.694 |               1.202 |             0.272 |                   0.978 |   1.444 |         2.226 | 0.416          | 0.750                 |
 | Leaf |         0.284 |               0.264 |             0.308 |                   0.272 |   0.706 |         1.555 | 0.054          | 0.087                 |
 
 #### Highlights
