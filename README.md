@@ -26,16 +26,29 @@ The edited components all render `Date.now()` in their output. The final rendere
 + Time in ms
 + Tested on M1 MacBook Pro (First generation Apple M1, 16 GB RAM, 1 TB SSD)
 
-|      | Vite + React* | Vite + React + 1000 | Vite SWC + React* | Vite SWC + React + 1000 | Nextjs* | Nextjs + 1000 |
-|------|---------------|---------------------|-------------------|-------------------------|---------|---------------|
-| Root |         0.694 |               1.202 |             0.272 |                   0.978 |   1.444 |         2.226 |
-| Leaf |         0.284 |               0.264 |             0.308 |                   0.272 |   0.706 |         1.555 |
+|      | Vite + React* | Vite + React + 1000 | Vite SWC + React* | Vite SWC + React + 1000 | Nextjs* | Nextjs + 1000 | Nextjs + Turbo | Nextjs + Turbo + 1000 |
+|------|---------------|---------------------|-------------------|-------------------------|---------|---------------|----------------|-----------------------|
+| Root |         0.694 |               1.202 |             0.272 |                   0.978 |   1.444 |         2.226 | 0.416          | 0.75                  |
+| Leaf |         0.284 |               0.264 |             0.308 |                   0.272 |   0.706 |         1.555 | 0.054          | 0.087                 |
 
 #### Highlights
+**Vite with React** vs **Nextjs with webpack**
 + Vite with 15 components (ag-grid, 11 columns, 148000 lines data) is faster than Nextjs by `108%`. In other words, Vite with React `2.08` times faster than Nextjs with webpack.
 
-+ Vite + React + 1000 components (in addition to default 15 components with ag-grid, 11 columns, 148000 lines data) is `85%` faster than Nextjs with 1000 components. In other words, Vite + React + 1000 components `1.85` times faster than Nextjs with 1000 components.
+**Vite + React + 1000** vs **Nextjs + 1000**
++ `Vite + React + 1000` components (in addition to default 15 components with ag-grid, 11 columns, 148000 lines data) is `85%` faster than `Nextjs with 1000` components. In other words, `Vite + React + 1000` components `1.85` times faster than Nextjs with 1000 components.
 
-+ Vite SWC + React with 15 components (ag-grid, 11 columns, 148000 lines data) is faster than Nextjs by `430%`, in other words it is faster than `5.3` times faster.
+**Vite SWC + React** vs **Nextjs**
++ `Vite SWC + React` with 15 components (ag-grid, 11 columns, 148000 lines data) is faster than `Nextjs` by `430%`, in other words it is faster than `5.3` times faster.
 
-+ Vite SWC + React + 1000 components (in addition to default 15 components with ag-grid, 11 columns, 148000 lines data) is `127%` faster than Nextjs with 1000 components. in other words it is faster than `2.27` times faster.
+**Vite SWC + React + 1000** vs **Nextjs + 1000**
++ `Vite SWC + React + 1000` components (in addition to default 15 components with ag-grid, 11 columns, 148000 lines data) is `127%` faster than `Nextjs with 1000` components. in other words it is faster than `2.27` times faster.
+
+**Nextjs + Turbo** vs **Nextjs + Turbo**
++ `Nextjs + Turbo` with 15 components (ag-grid, 11 columns, 148000 lines data) is `66%` faster than `Vite + React` (same 15 components). Nextjs + Turbo is `1.66` times faster than  Vite + React.
+
+**Nextjs + Turbo + 1000** vs **Nextjs + 1000**
++ `Nextjs + Turbo + 1000` is `196%` faster than `Nextjs + 1000` with webpack. In other words, Nextjs + Turbo + 1000 `2.96` times faster than Nextjs + 1000 with webpack.
+
+**Nextjs + Turbo + 1000** vs **Vite SWC + React + 1000**
++ `Nextjs + Turbo + 1000` is `30%` faster than `Vite SWC + React + 1000`. `Nextjs + Turbo + 1000` is `1.3` times faster than `Vite SWC + React + 1000`.
